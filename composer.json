@@ -1,0 +1,26 @@
+{
+    "name": "thomaswelton/laravel-mcrypt-faker",
+    "description": "Allows installation of Laravel where the PHP Mcrypt extension is not available. Provides encryption using OpenSSL, or by disabling encryption entierly.",
+    "keywords": ["laravel", "mcrypt", "hack", "encryption"],
+    "require": {
+        "php": ">=5.4.0",
+        "defuse/php-encryption": "~1.2"
+    },
+    "provide": {
+        "ext-mcrypt": "*",
+        "ext-openssl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thomaswelton\\LaravelMcryptFaker\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Welton",
+            "email": "thomaswelton@me.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
