@@ -28,6 +28,8 @@ The run `composer install` which will install this package along with the larave
 
 In your `config/app.php` file remove `Illuminate\Encryption\EncryptionServiceProvider` from the `providers` array and replace it with either `Thomaswelton\LaravelMcryptFaker\NoEncryptionServiceProvider` or `Thomaswelton\LaravelMcryptFaker\OpensslEncryptionServiceProvider`
 
+Also update the `cipher` in `config/app.php` and set it to `null` as the cipher value `MCRYPT_RIJNDAEL_128` is a constant that would not be defined without mcrypt
+
 **WARNING** The NoEncryptionServiceProvider, as the name suggests, provides no encryption for your application... at all. This should not be used in a production website. And even though the `OpensslEncryptionServiceProvider` provides encryption using the defuse/php-encryption package I personally can not attest to how cryptographically secure it's implementation is, even thought it "Works for me" 
 
 
